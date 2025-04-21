@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, TextField, Button, Typography, Divider } from "@mui/material";
+import { Box, TextField, Button, Typography, Divider, CircularProgress } from "@mui/material";
 import axios from "axios";
 
 const ContactUs = ({ isMobile = false }) => {
@@ -22,6 +22,8 @@ const ContactUs = ({ isMobile = false }) => {
   const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
+    setError("");
+    setSuccess("");
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -30,30 +32,23 @@ const ContactUs = ({ isMobile = false }) => {
     setIsSubmitting(true);
     setError("");
     setSuccess("");
-
-    // try {
-    //   const response = await axios.post("/api/send-email", formData);
-    //   if (response.data.success) {
-    //     setSuccess("Message sent successfully!");
-    //     setFormData({ name: "", email: "", phone: "", message: "" });
-    //   } else {
-    //     setError("Failed to send message. Please try again.");
-    //   }
-    // } catch (error) {
-    //   console.error("Email error:", error.message, error.stack);
-    //   return Response.json(
-    //     {
-    //       success: false,
-    //       message: "Failed to send email",
-    //       error: error.message,
-    //     },
-    //     { status: 500 }
-    //   );
-    // }
-
-    // setIsSubmitting(false);
+  
+    try {
+      const response = await axios.post("/api/contact", formData);
+      if (response.data.success) {
+        setSuccess("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setError("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Email error:", error.message);
+      setError("Something went wrong. Please try again later.");
+    }
+  
+    setIsSubmitting(false);
   };
-
+  
   return (
     <>
       <Box
@@ -199,7 +194,7 @@ const ContactUs = ({ isMobile = false }) => {
             <Button
               type="submit"
               variant="outlined"
-              disabled={isSubmitting}
+              startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : null}
               sx={{
                 borderColor: "white",
                 color: "white",
@@ -219,8 +214,6 @@ const ContactUs = ({ isMobile = false }) => {
       </Box>
       <Divider
         sx={{
-          marginY: 2,
-          borderBottomWidth: 1,
           borderColor: "white",
           width: "100%",
         }}

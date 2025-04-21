@@ -39,16 +39,25 @@ const ProjectModal = ({ open, onClose, selectedProject: project, isMobile }) => 
       <Box
         sx={{
           position: "relative",
-          width: isMobile ? "100%" : "90%",
-          maxWidth:isMobile? "100%" : "60%",
+          width: {
+            xs: "90%",
+            sm: "80%",
+            md: "70%",
+            lg: "60%"
+          },
+          maxHeight: "90vh",
+          height: "auto",
           bgcolor: "black",
           p: 2,
           borderRadius: 2,
           boxShadow: 24,
           textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center"
         }}
       >
-        <Typography variant="h6" mb={2}>
+        <Typography variant="h6" mb={2} color="white">
           {project?.quote}
         </Typography>
         <Typography variant="body2" color="gray" mb={2}>
@@ -66,7 +75,7 @@ const ProjectModal = ({ open, onClose, selectedProject: project, isMobile }) => 
           <img
             src={selectedSubImage || project?.image}
             alt="Expanded Project"
-            style={{ width: "100%", borderRadius: "10px", objectFit: "cover" }}
+            style={{ width: "100%", borderRadius: "10px", objectFit: "cover", maxHeight: "60vh" }}
           />
         </Box>
 

@@ -3,11 +3,15 @@ import { Box, Card, CardMedia, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 const images = [
-  { src: "/images/services/card1.jpeg", title: "Client Consultation", desc: "Creative & modern architectural solutions. Creative & modern architectural solutions. Creative & modern architectural solutions. Creative & modern architectural solutions." },
-  { src: "/images/services/card2.jpeg", title: "Wood Work", desc: "Enhancing spaces with elegant interiors." },
-  { src: "/images/services/card3.jpeg", title: "Lighting & Electrical", desc: "Robust & sustainable construction." },
-  { src: "/images/services/card4.jpeg", title: "Furniture", desc: "Smart city infrastructure development." },
-  { src: "/images/services/card5.jpeg", title: "Sourcing & Procurement", desc: "Personalized and elegant home designs." },
+  { src: "/images/services/card2.jpeg", title: "Interior Design Consultation", desc: "Expert-led design planning with space planning, theme selection, material consultation, mood boards, and design strategy." },
+  { src: "/images/services/card3.jpeg", title: "Personalized Home Interiors", desc: "Tailored designs for villas, apartments, and high-rises. Whether you love modern minimalism or rich traditional tones, we bring your vision to life with elegance and precision." },
+  { src: "/images/services/card4.jpeg", title: "Modular Solutions", desc: "Smart storage meets stunning design. Our modular solutions are built for daily comfort, lasting durability, and a sleek aesthetic." },
+  { src: "/images/services/card5.jpeg", title: "Bespoke Furniture & Decor Styling", desc: "Every piece tells your story. From custom sofas to curated decor accents, we handpick or design furniture that fits your lifestyle and elevates your space." },
+  { src: "/images/services/card1.jpeg", title: "Lighting & Ceiling Design", desc: "Set the mood, highlight the details. We create layered lighting and designer ceilings that add dimension, warmth, and character to every room."},
+  { src: "/images/services/card2.jpeg", title: "Renovation & Civil Works", desc: "Looking to refresh your space? We handle flooring, plumbing, electricals, wall modifications, and more — all with expert coordination and flawless execution."},
+  { src: "/images/services/card3.jpeg", title: "3D Visualizations & Design Previews", desc: "See your space before it comes alive. Our 3D renders and walkthroughs let you experience the design in detail and make confident choices."},
+  { src: "/images/services/card4.jpeg", title: "Smart Home & Automation Integration", desc: "Control lighting, climate, and security at your fingertips. We integrate smart tech seamlessly into your interiors for modern, effortless living."},
+  { src: "/images/services/card5.jpeg", title: "End-to-End Project Management", desc: "From the first sketch to the final cushion, we manage it all — timelines, vendors, quality checks, and handover — so you can simply enjoy the transformation."},
 ];
 
 const TitleBarImageList = ({ isMobile, isDesktop, isTablet }) => {

@@ -25,14 +25,7 @@ const ContentProjects = ({isMobile = false}) => {
         align="center"
         sx={{ fontWeight: "bold", mb: 2 }}
       >
-        Projects
-      </Typography>
-      <Typography
-        variant="subtitle1"
-        align="center"
-        sx={{ mb: 4, fontWeight: "bold", maxWidth: "80%" }}
-      >
-        A-square made our home beautiful and the process of making it easier.
+        Our Projects
       </Typography>
 
       {/* Ensure carousel takes up proper width */}

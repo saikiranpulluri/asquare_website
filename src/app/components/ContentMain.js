@@ -31,7 +31,7 @@ const ContentMain = ({ isMobile = false }) => {
           Elevating Lives
         </Typography>
         <Typography variant="subtitle1" sx={{ mt: 2 }}>
-          Our passion is for innovative design and attention to detail.
+          Expertly crafted interior spaces that blend style, comfort, and you.
         </Typography>
       </Box>
 

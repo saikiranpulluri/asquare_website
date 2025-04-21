@@ -45,9 +45,9 @@ const Header = () => {
   };
 
   const headerIcons = [
-    { component: <Facebook />, url: "https://www.facebook.com" },
-    { component: <Instagram />, url: "https://www.instagram.com" },
-    { component: <WhatsApp />, url: "https://www.twitter.com" },
+    // { component: <Facebook />, url: "https://www.facebook.com" },
+    { component: <Instagram />, url: "https://www.instagram.com/asquare_design_studio?igsh=cDhqamgwNDhwb2hz&utm_source=qr" },
+    { component: <WhatsApp />, url: "https://wa.me/message/4GXMFNM7EONEE1" },
   ];
 
   return (
@@ -69,7 +69,7 @@ const Header = () => {
               sx={{ flexGrow: 1, cursor: "pointer" }}
               onClick={() => handleScroll("main")}
             >
-              <img src="/images/logomain.png" alt="Logo" height="50px" />
+              <img src="/images/logomain.png" alt="Logo" height="35px" />
             </Box>
             <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)}>
               <MenuIcon />
@@ -131,11 +131,11 @@ const Header = () => {
           <>
             {/* Left Navigation */}
             <Box sx={{ display: "flex", gap: 3 }}>
-              {["services", "projects", "aboutus"].map((section) => (
+              {pages.map((section) => ( section.sectionName !== "Contact Us" && 
                 <Button
                   key={section}
                   color="inherit"
-                  onClick={() => handleScroll(section)}
+                  onClick={() => handleScroll(section.navigate)}
                   sx={{
                     position: "relative",
                     "&::after": {
@@ -151,7 +151,7 @@ const Header = () => {
                     "&:hover::after": { width: "100%" },
                   }}
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section.sectionName}
                 </Button>
               ))}
             </Box>

@@ -3,6 +3,14 @@ import { Box, Typography, IconButton } from "@mui/material";
 import { Facebook, Instagram, WhatsApp } from "@mui/icons-material";
 
 const Footer = () => {
+  const handleClick = (url) => {
+    window?.open(url, "_blank");
+  };
+  const headerIcons = [
+    // { component: <Facebook />, url: "https://www.facebook.com" },
+    { component: <Instagram />, url: "https://www.instagram.com/asquare_design_studio?igsh=cDhqamgwNDhwb2hz&utm_source=qr", key: "InstaFooter" },
+    { component: <WhatsApp />, url: "https://wa.me/message/4GXMFNM7EONEE1", key: "whatsappFooter" },
+  ];
   return (
     <Box
       sx={{
@@ -17,20 +25,20 @@ const Footer = () => {
     >
       {/* Logo */}
       <Box sx={{ mb: 2 }}>
-        <img src="/images/logo.png" alt="Logo"/>
+        <img src="/images/logo.png" alt="Logo" />
       </Box>
 
       {/* Social Media Icons */}
       <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
-        <IconButton sx={{ color: "white" }}>
-          <Facebook fontSize="large" />
-        </IconButton>
-        <IconButton sx={{ color: "white" }}>
-          <Instagram fontSize="large" />
-        </IconButton>
-        <IconButton sx={{ color: "white" }}>
-          <WhatsApp fontSize="large" />
-        </IconButton>
+        {headerIcons.map((item, index) => (
+          <IconButton
+            key={item.key}
+            onClick={() => handleClick(item.url)}
+            sx={{ color: "white" }}
+          >
+            {item.component}
+          </IconButton>
+        ))}
       </Box>
 
       {/* Navigation Links */}

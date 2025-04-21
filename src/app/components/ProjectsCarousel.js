@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Box,
   Typography,
@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
+import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -108,7 +108,17 @@ const projects = [
 const ProjectsCarousel = ({isMobile}) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const swiperRef = useRef(null);
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current?.autoplay){
+      if(selectedProject) {
+        swiperRef.current.autoplay.stop();
+      }
+      else {
+        swiperRef.current.autoplay.start();
+      }
+    }
+  }, [selectedProject])
   return (
     <Box
       sx={{
@@ -140,6 +150,11 @@ const ProjectsCarousel = ({isMobile}) => {
           centeredSlides
           slidesPerView={isMobile ? 1 : 3}
           loop
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true
+          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           navigation={!isMobile && { nextEl: ".next", prevEl: ".prev" }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           coverflowEffect={{
@@ -149,7 +164,7 @@ const ProjectsCarousel = ({isMobile}) => {
             modifier: 2.5,
             slideShadows: false,
           }}
-          modules={[EffectCoverflow, Navigation]}
+          modules={[EffectCoverflow, Navigation, Autoplay]}
           style={{ width: "90%", maxHeight: "400px", padding: "20px 0" }}
         >
           {projects.map((project, index) => (
@@ -163,6 +178,7 @@ const ProjectsCarousel = ({isMobile}) => {
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
+                whileTap={{scale: 0.95}}
                 onClick={() => setSelectedProject(project)}
               >
                 <Box
@@ -203,12 +219,11 @@ const ProjectsCarousel = ({isMobile}) => {
                   />
                 </Box>
                 {/* Move text OUTSIDE the Box */}
-                <Typography variant="body1" mt={2} sx={{ color: "white" }}>
+                {activeIndex === index && <><Typography variant="body1" mt={2} sx={{ color: "white", marginTop: 0 }}>
                   {project.quote}
-                </Typography>
-                <Typography variant="body2" color="gray">
-                  - {project.author}
-                </Typography>
+                </Typography><Typography variant="body2" color="gray">
+                    - {project.author}
+                  </Typography></>}
               </motion.div>
             </SwiperSlide>
           ))}

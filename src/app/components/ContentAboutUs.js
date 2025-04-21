@@ -10,7 +10,7 @@ const ContentAboutUs = ({isMobile = false}) => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
       >
-        <Typography variant={isMobile ? "h4" : "h3"} fontWeight="bold" textAlign="center" pt={8} color="white">
+        <Typography variant="h3" fontWeight="bold" textAlign="center" pt={8} color="white">
           About us
         </Typography>
       </motion.div>
