@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
+     console.log("✅ POST /api/contact hit");
     const { name, email, phone, message } = await req.json();
 
     // Validate required fields
