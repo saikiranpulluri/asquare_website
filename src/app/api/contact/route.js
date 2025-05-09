@@ -21,7 +21,8 @@ export async function POST(req) {
         pass: process.env.SMTP_PASS,
       },
     });
-
+    console.log("env variable1",process.env.SMTP_USER )
+    console.log("env variable",process.env.SMTP_HOST )
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: process.env.SMTP_RECEIVER, // your destination email, e.g., your Gmail or same domain
