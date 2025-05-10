@@ -50,6 +50,7 @@ a {
 
 }
 .about-us, .our-projects, .services{background: #101010; position: relative;}
+.about-us h3, .our-projects h3, .services h3, .contact-us h3{font-size: 48px;}
 /* .our-projects{position: relative; } */
 .our-projects:after{content: ""; position: absolute; right: 0; top:-60px; width:232px; height:463px; background: url(../../public/images/watermark_logo.png) no-repeat;}
 .our-projects .prev, .our-projects .next{border-radius: 0;}
@@ -60,14 +61,12 @@ a {
   flex-wrap: wrap;
   justify-content: center;
  }
- .services-inner-container{display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 4;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
-  max-width: 1184px;
-  width: 100%}
+ .services-inner-container{
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+  /* gap: 32px; */
+  /* justify-content: center; */
+ }
 .services:before{content: ""; position: absolute; left: 20px; top:100px; width:150px; height:1290px; background: url(../../public/images/watermark.png) no-repeat;}
 .card-overlay{position: absolute;
   bottom: 0;
@@ -91,8 +90,7 @@ a {
   .overlay-desc{text-align: left; padding-top: 10px; }
   .overlay-desc p{font-size: 16px;}
   .links{
-    position: relative;
-   
+    position: relative; font-size: 20px !important;
     
   }
   .links:after{ content: "";
@@ -117,3 +115,43 @@ a {
       .contact-us:after{content: ""; position: absolute; right: 10px; top:-790px; width:150px; height:1978px; background: url(../../public/images/watermark1.png) no-repeat;}
       .contact-us:before{content: ""; position: absolute; left: -90px; top:0px; width:232px; height:463px; background: url(../../public/images/watermark_logo1.png) no-repeat;}
       .about-us{padding-bottom: 12%;}
+
+
+.services-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+
+  max-width: 1200px; 
+
+  align-items: center;
+  padding: 2px;
+ 
+  width: 100%
+}
+
+
+.banner_content h3{font-size: 54px; line-height: 94px;}
+.primary-btn{font-size: 20px !important;}
+.about-content{height:500px}
+.copyright{color:#fff; font-size: 20px;}
+/* .swiper-slide-visible{width:768px !important;} */
+
+@media screen and (max-width: 1500px){
+
+  .banner_content h3{font-size: 44px; line-height: 75px;}
+  .links, .primary-btn, .copyright{font-size: 18px !important;
+    
+  }
+  .about-us h3, .our-projects h3, .services h3, .contact-us h3{font-size: 40px !important;}
+  .services-card{width:320px}
+  .footer-logo{max-width: 200px;}
+  .about-content h4{font-size: 32px;}
+  .about-content p{font-size: 22px;}
+  .about-content{height:390px}
+}
+
+@media screen and (max-width: 1330px){
+  .services-card{width:280px; height:260px}
+}

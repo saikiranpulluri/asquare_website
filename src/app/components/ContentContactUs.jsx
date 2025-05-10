@@ -69,7 +69,7 @@ const ContactUs = ({ isMobile = false }) => {
           variant="h3" fontFamily= "Inria Serif, serif"
           sx={{ textAlign: "center",mb: 8, fontWeight: "bold" }}
         >
-          Contact Us
+          Contact us
         </Typography>
 
         <Box
@@ -197,16 +197,26 @@ const ContactUs = ({ isMobile = false }) => {
             <Button
               type="submit"
               variant="outlined"
+              fontFamily= "Inria Serif, serif"
+      
               startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : null}
               sx={{
                 borderColor: "white",
                 color: "white",
+                fontFamily:"Inria Serif, serif",
+                fontSize: "20px",
+                whiteSpace: "nowrap",
+                textTransform: "capitalize",
                 width: isMobile ? "100%" : "20%",
+                borderRadius: "0",
+                borderWidth: "2px",
+                width:"150px",
                 mt: 4,
                 "&:hover": {
                   borderColor: "white",
                   backgroundColor: "white",
                   color: "black",
+                  
                 },
               }}
             >

@@ -18,20 +18,22 @@ const ContentAboutUs = ({isMobile = false}) => {
       <Box sx={{ position: "relative", width: "100%" }}>
         {/* Background Image with proper cropping */}
         <Box
+        
           component="img"
           src="/images/about.jpg"
           alt="Team"
           sx={{
             width: "100%",
-            height: isMobile ? "400px" : "700px",
-            objectFit: "cover",
-            objectPosition: "center",
+            // height: isMobile ? "400px" : "700px",
+            // objectFit: "cover",
+            // objectPosition: "center",
             // filter: "brightness(50%)", 
           }}
         />
 
         {/* Glassmorphic Text Box - Responsive */}
         <motion.div
+        className="about-content"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           style={{
@@ -45,8 +47,8 @@ const ContentAboutUs = ({isMobile = false}) => {
             padding: "15px",
             textAlign: "left",
             color: "white",
-           
-            height: "497px"
+           border:"1px solid #888",
+            
           }}
         >
           <Typography variant="h4" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize={isMobile ? "24px" : "40px"}>

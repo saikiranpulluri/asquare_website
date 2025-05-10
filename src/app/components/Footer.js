@@ -24,7 +24,7 @@ const Footer = () => {
       }}
     >
       {/* Logo */}
-      <Box sx={{ mb: 3, mt: 4 }}>
+      <Box sx={{ mb: 3, mt: 4 }} className="footer-logo">
         <img src="/images/logo.png" alt="Logo" />
       </Box>
 
@@ -59,7 +59,7 @@ const Footer = () => {
       </Box>
 
       {/* Copyright */}
-      <Typography variant="body2" color="white" fontFamily= "Inria Serif, serif" fontSize="20px">
+      <Typography className="copyright" variant="body2" fontFamily= "Inria Serif, serif" >
         Copyright &copy; 2025 Mountain
       </Typography>
     </Box>

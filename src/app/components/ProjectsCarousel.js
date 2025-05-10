@@ -187,9 +187,10 @@ const ProjectsCarousel = ({isMobile}) => {
                 onClick={() => setSelectedProject(project)}
               >
                 <Box
+                // className="swiper-slide-center"
                   sx={{
                     position: "relative",
-                    width: "768px",
+                    // width: "768px",
                     height: "540px", // adjust as needed
                     borderRadius: 2,
                     overflow: "hidden",

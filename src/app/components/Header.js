@@ -141,7 +141,7 @@ const Header = () => {
                   sx={{
                    textTransform : "capitalize",
                    fontFamily: "Inria Serif, serif",
-                  fontSize: "20px"
+                  
                     
                     
                   }}
@@ -173,13 +173,14 @@ const Header = () => {
               <Button
                 variant="outlined"
                 color="secondary"
+                className="primary-btn"
                 sx={{
                   borderColor: "white",
                   color: "white",
                   textTransform: "capitalize",
                   fontFamily: "Inria Serif, serif",
                   borderRadius: '0',
-                  fontSize: "20px",
+                  
                   "&:hover": {
                     borderColor: "white",
                     backgroundColor: "white",

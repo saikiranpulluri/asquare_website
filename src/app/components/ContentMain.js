@@ -25,10 +25,10 @@ const ContentMain = ({ isMobile = false }) => {
       <Box className="banner_overlay"></Box> 
       {/* Main Centered Text */}
       <Box class="banner_content">
-        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize="54px" lineHeight="94px">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" >
           Transforming Spaces,
         </Typography>
-        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize="54px" lineHeight="94px">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" >
           Elevating Lives
         </Typography>
         <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" fontSize="20px" fontWeight="300" sx={{ mt: 2 , maxWidth: '700px'}}>
