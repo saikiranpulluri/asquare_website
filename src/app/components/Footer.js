@@ -1,16 +1,22 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import { Facebook, Instagram, WhatsApp } from "@mui/icons-material";
+import { Box, Typography, IconButton, Button } from "@mui/material";
+import { Instagram, WhatsApp } from "@mui/icons-material";
 
 const Footer = () => {
   const handleClick = (url) => {
     window?.open(url, "_blank");
   };
   const headerIcons = [
-    // { component: <Facebook />, url: "https://www.facebook.com" },
     { component: <Instagram />, url: "https://www.instagram.com/asquare_design_studio?igsh=cDhqamgwNDhwb2hz&utm_source=qr", key: "InstaFooter" },
     { component: <WhatsApp />, url: "https://wa.me/message/4GXMFNM7EONEE1", key: "whatsappFooter" },
   ];
+  const pages = [{ sectionName: "Services", navigate: "services" },
+  { sectionName: "Projects", navigate: "projects" },
+  { sectionName: "About Us", navigate: "aboutus" }
+  ];
+  const handleScroll = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Box
       sx={{
@@ -32,10 +38,9 @@ const Footer = () => {
       <Box sx={{ display: "flex", gap: 3, mb: 4 }}>
         {headerIcons.map((item, index) => (
           <IconButton
-          className="social-icons"
+            className="social-icons"
             key={item.key}
             onClick={() => handleClick(item.url)}
-            
           >
             {item.component}
           </IconButton>
@@ -44,7 +49,7 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <Box
-      className="footer-links"
+        className="footer-links"
         sx={{
           display: "flex",
           gap: 4,
@@ -53,14 +58,14 @@ const Footer = () => {
           mb: 8,
         }}
       >
-        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">Services</Typography>
-        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">Projects</Typography>
-        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">About Us</Typography>
-      </Box>
+        {pages.map((section) => (
+          <Typography className="links" sx={{cursor: "pointer"}} variant="body1" onClick={() => handleScroll(section.navigate)} fontFamily="Inria Serif, serif" fontSize="20px">{section.sectionName}</Typography>
+        ))}
+       </Box>
 
       {/* Copyright */}
-      <Typography className="copyright" variant="body2" fontFamily= "Inria Serif, serif" >
-        Copyright &copy; 2025 Mountain
+      <Typography className="copyright" variant="body2" fontFamily="Inria Serif, serif" >
+        Copyright &copy; 2025. A Square.
       </Typography>
     </Box>
   );

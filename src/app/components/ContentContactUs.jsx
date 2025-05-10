@@ -240,12 +240,18 @@ const textFieldStyles = {
   backgroundColor: "#222",
   borderRadius: "5px",
   "& .MuiOutlinedInput-root": {
-    "& fieldset": { borderColor: "0" },
-    "&:hover fieldset": { borderColor: "0" },
+    "& fieldset": { borderColor: "#444" },
+    "&:hover fieldset": { borderColor: "#666" },
     "&.Mui-focused fieldset": { borderColor: "#ddd", borderWidth: "2px" },
   },
-  "& .MuiInputLabel-root": { color: "#bbb" },
-  "& .MuiInputLabel-root.Mui-focused": { color: "#ddd" },
+  "& .MuiInputLabel-root": {
+    color: "#bbb",
+    transform: "translate(14px, 14px) scale(1)", // for better mobile rendering
+  },
+  "& .MuiInputLabel-root.Mui-focused": {
+    color: "#ddd",
+    transform: "translate(14px, -6px) scale(0.75)", // shrink on focus
+  },
   "& .MuiInputBase-input": {
     color: "white",
     fontSize: "16px",
