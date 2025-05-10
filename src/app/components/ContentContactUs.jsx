@@ -52,19 +52,22 @@ const ContactUs = ({ isMobile = false }) => {
   return (
     <>
       <Box
+      className="contact-us"
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: "black",
+          backgroundColor: "#101010",
           color: "white",
           padding: 4,
+          maxWidth: "90%",
+          margin: "0 auto"
         }}
       >
         {/* Section Heading */}
         <Typography
-          variant="h3"
-          sx={{ textAlign: "center", marginBottom: 4, fontWeight: "bold" }}
+          variant="h3" fontFamily= "Inria Serif, serif"
+          sx={{ textAlign: "center",mb: 8, fontWeight: "bold" }}
         >
           Contact Us
         </Typography>
@@ -214,7 +217,7 @@ const ContactUs = ({ isMobile = false }) => {
       </Box>
       <Divider
         sx={{
-          borderColor: "white",
+          borderColor: "#696969",
           width: "100%",
         }}
       />

@@ -135,23 +135,15 @@ const Header = () => {
               {pages.map((section) => ( section.sectionName !== "Contact Us" && 
                 <Button
                   key={section}
+                  className="links"
                   color="inherit"
                   onClick={() => handleScroll(section.navigate)}
                   sx={{
-                    position: "relative",
-                    textTransform: "capitalize",
-                    fontFamily: "Inria Serif, serif",
-                    "&::after": {
-                      content: "''",
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      width: "0%",
-                      height: "2px",
-                      backgroundColor: "#fff",
-                      transition: "width 0.3s ease-in-out",
-                    },
-                    "&:hover::after": { width: "100%" },
+                   textTransform : "capitalize",
+                   fontFamily: "Inria Serif, serif",
+                  fontSize: "20px"
+                    
+                    
                   }}
                 >
                   {section.sectionName}
@@ -168,18 +160,12 @@ const Header = () => {
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               {headerIcons.map((item, index) => (
                 <IconButton
+                className="social-icons"
                   key={index}
                   onClick={() => handleClick(item.url)}
-                  color="inherit"
                   
-                  sx={{
-                   
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "black",
-                      borderRadius: '2px'
-                    },
-                  }}
+          
+                  
                 >
                   {item.component}
                 </IconButton>
@@ -193,6 +179,7 @@ const Header = () => {
                   textTransform: "capitalize",
                   fontFamily: "Inria Serif, serif",
                   borderRadius: '0',
+                  fontSize: "20px",
                   "&:hover": {
                     borderColor: "white",
                     backgroundColor: "white",

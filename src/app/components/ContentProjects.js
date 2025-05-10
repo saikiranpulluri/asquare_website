@@ -15,7 +15,7 @@ const ContentProjects = ({isMobile = false}) => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        paddingY: "5%",
+        paddingY: "6%",
         width: "100%",
       }}
     >
@@ -24,7 +24,7 @@ const ContentProjects = ({isMobile = false}) => {
         variant="h3"
         align="center"
         fontFamily= "Inria Serif, serif"
-        sx={{ fontWeight: "bold", mb: 2 }}
+        sx={{ fontWeight: "bold", mb: 8 }}
       >
         Our Projects
       </Typography>

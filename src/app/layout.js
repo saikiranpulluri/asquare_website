@@ -13,7 +13,7 @@ import "./globals.css";
 //   subsets: ["latin"],
 // });
 const inriaSerif = Inria_Serif({
-  weight: ['400', '700'],
+  weight: ['300', '400', '700'],
   subsets: ['latin'],
   variable: "--font-inria-serif",
   

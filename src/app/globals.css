@@ -49,9 +49,9 @@ a {
 .banner_content{position: relative; padding: 20px;    font-family: "Inria Serif", serif;
 
 }
-.about-us, .our-projects, .services{background: #121212; position: relative;}
+.about-us, .our-projects, .services{background: #101010; position: relative;}
 /* .our-projects{position: relative; } */
-.our-projects:after{content: ""; position: absolute; right: 0; top:-60px; width:232px; height:463px; background: url(../../public/images/watermark_logo.png);}
+.our-projects:after{content: ""; position: absolute; right: 0; top:-60px; width:232px; height:463px; background: url(../../public/images/watermark_logo.png) no-repeat;}
 .our-projects .prev, .our-projects .next{border-radius: 0;}
 .our-projects .prev:hover, .our-projects .next:hover{background: white;}
 .our-projects .prev:hover svg, .our-projects .next:hover svg{color: #000;}
@@ -68,7 +68,7 @@ a {
   padding: 2px;
   max-width: 1184px;
   width: 100%}
-.services:before{content: ""; position: absolute; left: 20px; top:100px; width:150px; height:1290px; background: url(../../public/images/watermark.png);}
+.services:before{content: ""; position: absolute; left: 20px; top:100px; width:150px; height:1290px; background: url(../../public/images/watermark.png) no-repeat;}
 .card-overlay{position: absolute;
   bottom: 0;
   left: 0;
@@ -90,4 +90,30 @@ a {
   .card-overlay h5{font-size: 20px;}
   .overlay-desc{text-align: left; padding-top: 10px; }
   .overlay-desc p{font-size: 16px;}
+  .links{
+    position: relative;
+   
+    
+  }
+  .links:after{ content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out}
+
+    .links:hover::after{
+      width: 100%;
+    }
   
+    .footer-links .links{padding-bottom: 10px;}
+    .social-icons{color:#fff !important}
+    .social-icons:hover{ background-color: #fff !important;
+      color: black !important;
+      border-radius: 2px}
+      .contact-us{position: relative;}
+      .contact-us:after{content: ""; position: absolute; right: 10px; top:-790px; width:150px; height:1978px; background: url(../../public/images/watermark1.png) no-repeat;}
+      .contact-us:before{content: ""; position: absolute; left: -90px; top:0px; width:232px; height:463px; background: url(../../public/images/watermark_logo1.png) no-repeat;}
+      .about-us{padding-bottom: 12%;}

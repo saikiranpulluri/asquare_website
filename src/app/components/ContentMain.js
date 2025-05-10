@@ -25,13 +25,13 @@ const ContentMain = ({ isMobile = false }) => {
       <Box className="banner_overlay"></Box> 
       {/* Main Centered Text */}
       <Box class="banner_content">
-        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize="54px" lineHeight="94px">
           Transforming Spaces,
         </Typography>
-        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize="54px" lineHeight="94px">
           Elevating Lives
         </Typography>
-        <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" sx={{ mt: 2 }}>
+        <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" fontSize="20px" fontWeight="300" sx={{ mt: 2 , maxWidth: '700px'}}>
           Expertly crafted interior spaces that blend style, comfort, and you.
         </Typography>
       </Box>
@@ -48,11 +48,11 @@ const ContentMain = ({ isMobile = false }) => {
           alignItems: "center",
         }}
       >
-        <Typography variant="subtitle1" sx={{ mb: 1 }}>
+        <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" fontSize="22px" sx={{ mb: 1 }}>
           Scroll Down
         </Typography>
         <Button sx={{ color: "white" }} onClick={handleScroll}>
-          <ExpandCircleDownRoundedIcon fontSize="large" />
+          <ExpandCircleDownRoundedIcon fontSize="medium" />
         </Button>
       </Box>
     </Box>

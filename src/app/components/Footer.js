@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "black",
+        backgroundColor: "#101010",
         color: "white",
         py: 4,
         textAlign: "center",
@@ -24,17 +24,18 @@ const Footer = () => {
       }}
     >
       {/* Logo */}
-      <Box sx={{ mb: 2 }}>
+      <Box sx={{ mb: 3, mt: 4 }}>
         <img src="/images/logo.png" alt="Logo" />
       </Box>
 
       {/* Social Media Icons */}
-      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
+      <Box sx={{ display: "flex", gap: 3, mb: 4 }}>
         {headerIcons.map((item, index) => (
           <IconButton
+          className="social-icons"
             key={item.key}
             onClick={() => handleClick(item.url)}
-            sx={{ color: "white" }}
+            
           >
             {item.component}
           </IconButton>
@@ -43,21 +44,22 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <Box
+      className="footer-links"
         sx={{
           display: "flex",
-          gap: 3,
+          gap: 4,
           justifyContent: "center",
           flexWrap: "wrap",
-          mb: 2,
+          mb: 8,
         }}
       >
-        <Typography variant="body1">Services</Typography>
-        <Typography variant="body1">Projects</Typography>
-        <Typography variant="body1">About Us</Typography>
+        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">Services</Typography>
+        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">Projects</Typography>
+        <Typography  className="links" variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px">About Us</Typography>
       </Box>
 
       {/* Copyright */}
-      <Typography variant="body2" color="gray">
+      <Typography variant="body2" color="white" fontFamily= "Inria Serif, serif" fontSize="20px">
         Copyright &copy; 2025 Mountain
       </Typography>
     </Box>

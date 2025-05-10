@@ -27,14 +27,14 @@ const projects = [
       "/images/projects/project11.jpeg",
       "/images/projects/project12.jpeg",
       "/images/projects/project1.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project11.jpeg",
-      "/images/projects/project12.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project2.jpeg",
-      "/images/projects/project21.jpeg",
-      "/images/projects/project22.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project11.jpeg",
+      // "/images/projects/project12.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project2.jpeg",
+      // "/images/projects/project21.jpeg",
+      // "/images/projects/project22.jpeg",
     ],
   },
   {
@@ -54,16 +54,16 @@ const projects = [
     subImages: [
       "/images/projects/project1.jpeg",
       "/images/projects/project11.jpeg",
-      "/images/projects/project12.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project11.jpeg",
-      "/images/projects/project12.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project1.jpeg",
-      "/images/projects/project2.jpeg",
-      "/images/projects/project21.jpeg",
-      "/images/projects/project22.jpeg",
+      // "/images/projects/project12.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project11.jpeg",
+      // "/images/projects/project12.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project1.jpeg",
+      // "/images/projects/project2.jpeg",
+      // "/images/projects/project21.jpeg",
+      // "/images/projects/project22.jpeg",
     ],
   },
   {
@@ -78,7 +78,7 @@ const projects = [
   },
   {
     image: "/images/projects/project1.jpeg",
-    quote: "A square made our home beautiful.",
+    quote: "A-square made our home beautiful and the process of making it easier.",
     author: "B Rajesh",
     subImages: [
       "/images/projects/project1.jpeg",
@@ -90,9 +90,9 @@ const projects = [
       "/images/projects/project12.jpeg",
       "/images/projects/project1.jpeg",
       "/images/projects/project1.jpeg",
-      "/images/projects/project2.jpeg",
-      "/images/projects/project21.jpeg",
-      "/images/projects/project22.jpeg",
+      // "/images/projects/project2.jpeg",
+      // "/images/projects/project21.jpeg",
+      // "/images/projects/project22.jpeg",
     ],
   },
   {
@@ -150,7 +150,8 @@ const ProjectsCarousel = ({isMobile}) => {
           effect="coverflow"
           grabCursor
           centeredSlides
-          slidesPerView={isMobile ? 1 : 3}
+          slidesPerView={isMobile ? 1 : 2}
+          // slidesPerView="auto"
           loop
           autoplay={{
             delay: 3000,
@@ -162,20 +163,22 @@ const ProjectsCarousel = ({isMobile}) => {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 100,
+            depth: 200,
             modifier: 2.5,
             slideShadows: false,
           }}
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          style={{ width: "90%", maxHeight: "400px", padding: "20px 0" }}
+          style={{ width: "90%",  maxHeight: "768px" }}
         >
           {projects.map((project, index) => (
             <SwiperSlide
               key={index}
+            
               style={{
                 textAlign: "center",
                 position: "relative",
-                paddingBottom: "60px",
+                paddingBottom: "30px",
+               
               }}
             >
               <motion.div
@@ -186,8 +189,8 @@ const ProjectsCarousel = ({isMobile}) => {
                 <Box
                   sx={{
                     position: "relative",
-                    width: "100%",
-                    height: "300px", // adjust as needed
+                    width: "768px",
+                    height: "540px", // adjust as needed
                     borderRadius: 2,
                     overflow: "hidden",
                     boxShadow: "0px 4px 20px rgba(255, 255, 255, 0.2)",
@@ -221,9 +224,9 @@ const ProjectsCarousel = ({isMobile}) => {
                   />
                 </Box>
                 {/* Move text OUTSIDE the Box */}
-                {activeIndex === index && <><Typography variant="body1" mt={2} sx={{ color: "white", marginTop: 0 }}>
+                {activeIndex === index && <><Typography variant="body1" fontFamily= "Inria Serif, serif" mt={2} sx={{ color: "white", fontStyle: "italic", fontSize: "20px" , maxWidth: "390px", margin: "30px auto 0" }}>
                   {project.quote}
-                </Typography><Typography variant="body2" color="gray">
+                </Typography><Typography variant="body2" fontFamily= "Inria Serif, serif" color="white" fontSize="20px">
                     - {project.author}
                   </Typography></>}
               </motion.div>
