@@ -59,7 +59,7 @@ const Footer = () => {
         }}
       >
         {pages.map((section) => (
-          <Typography className="links" sx={{cursor: "pointer"}} variant="body1" onClick={() => handleScroll(section.navigate)} fontFamily="Inria Serif, serif" fontSize="20px">{section.sectionName}</Typography>
+          <Typography key= {section.sectionName} className="links" sx={{cursor: "pointer"}} variant="body1" onClick={() => handleScroll(section.navigate)} fontFamily="Inria Serif, serif" fontSize="20px">{section.sectionName}</Typography>
         ))}
        </Box>
 
