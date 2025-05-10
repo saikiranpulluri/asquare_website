@@ -50,7 +50,7 @@ const ContentAboutUs = ({isMobile = false}) => {
           }}
         >
           <Typography variant="h4" fontWeight="bold" fontFamily= "Inria Serif, serif" fontSize={isMobile ? "24px" : "40px"}>
-            "At A Square
+            {`"At A Square`}
           </Typography>
           <Typography variant="body2" fontSize={isMobile ? "12px" : "26px"} mt={1} sx={{ lineHeight: 1.4 }} fontWeight="300" fontFamily= "Inria Serif, serif">
             we are passionate about transforming spaces into timeless works of art. We believe that design
@@ -58,7 +58,7 @@ const ContentAboutUs = ({isMobile = false}) => {
             provide lasting comfort.
           </Typography>
           <Typography variant="h4" fontFamily= "Inria Serif, serif" fontWeight="bold" mt={2} fontSize={isMobile ? "24px" : "40px"}>
-            Let us help you design the space of your dreams."
+            {`Let us help you design the space of your dreams."`}
           </Typography>
         </motion.div>
       </Box>
