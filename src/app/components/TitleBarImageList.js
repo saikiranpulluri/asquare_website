@@ -22,15 +22,9 @@ const TitleBarImageList = ({ isMobile, isDesktop, isTablet }) => {
 
   return (
     <Box
+    className="services-inner-container"
       sx={{
-        display: "grid",
-        gridTemplateColumns: gridColumns,
-        gap: 4,
-        justifyContent: "center",
-        alignItems: "center",
-        padding: 2,
-        maxWidth: "1500px",
-        width: "100%",
+        
       }}
     >
       {images.map((image, index) => {
@@ -45,16 +39,11 @@ const TitleBarImageList = ({ isMobile, isDesktop, isTablet }) => {
             }}
           >
             <Card
+            className="services-card"
               component={motion.div}
-              whileHover={isMobile ? {} : { scale: 1.03 }}
+              // whileHover={isMobile ? {} : { scale: 1.03 }}
               sx={{
-                position: "relative",
-                width: "100%",
-                maxWidth: 700,
-                height: 400,
-                overflow: "hidden",
-                borderRadius: "10px",
-                cursor: "pointer",
+               
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -64,46 +53,35 @@ const TitleBarImageList = ({ isMobile, isDesktop, isTablet }) => {
                 height="100%"
                 image={image.src}
                 alt={image.title}
-                sx={{ transition: "transform 0.3s ease" }}
+                // sx={{ transition: "transform 0.3s ease" }}
               />
 
               {/* Expandable Overlay */}
               <motion.div
                 initial={{ height: "30%" }}
+                className="card-overlay"
                 animate={{ height: hoveredIndex === index ? "100%" : "25%" }}
-                transition={{ duration: 0.4 }}
+                // transition={{ duration: 0.4 }}
                 style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  width: "100%",
-                  background: "rgba(0, 0, 0, 0.7)",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "white",
-                  padding: "20px",
-                  height: "30%",
+                  
+                  
                 }}
               >
                 {/* Title (Always Visible) */}
-                <Typography variant="h5" fontWeight="bold">
+                <Typography variant="h5" fontWeight="bold" fontFamily= "Inria Serif, serif">
                   {image.title}
                 </Typography>
 
                 {/* Description (Only shows when overlay is fully expanded) */}
                 {hoveredIndex === index && (
                   <motion.div
+                  className="overlay-desc"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
-                    style={{
-                      marginTop: 2,
-                      textAlign: "center",
-                    }}
+                   
                   >
-                    <Typography variant="body2">{image.desc}</Typography>
+                    <Typography variant="body2" fontFamily= "Inria Serif, serif">{image.desc}</Typography>
                   </motion.div>
                 )}
               </motion.div>

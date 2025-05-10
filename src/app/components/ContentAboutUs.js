@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 const ContentAboutUs = ({isMobile = false}) => {
 
   return (
-    <Box sx={{ position: "relative", width: "100%", overflow: "hidden", backgroundColor: "black", height: "100%" }}>
+    <Box className="about-us" sx={{width: "100%", overflow: "hidden", height: "100%" }}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
       >
-        <Typography variant="h3" fontWeight="bold" textAlign="center" pt={8} color="white">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" textAlign="center" pt={8} color="white">
           About us
         </Typography>
       </motion.div>

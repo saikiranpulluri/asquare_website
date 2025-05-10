@@ -10,8 +10,10 @@ import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';  
 import ProjectModal from "./ProjectModal";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 
@@ -128,7 +130,7 @@ const ProjectsCarousel = ({isMobile}) => {
         alignItems: "center",
       }}
     >
-      <Box
+      <Box 
         sx={{
           display: "flex",
           alignItems: "center",
@@ -141,7 +143,7 @@ const ProjectsCarousel = ({isMobile}) => {
             className="prev"
             sx={{ color: "white", border: "1px solid white" }}
           >
-            <ArrowBackIosNewIcon fontSize="large" />
+            <ArrowBackOutlinedIcon fontSize="large" />
           </IconButton>
         )}
         <Swiper
@@ -233,7 +235,7 @@ const ProjectsCarousel = ({isMobile}) => {
             className="next"
             sx={{ color: "white", border: "1px solid white" }}
           >
-            <ArrowForwardIosIcon fontSize="large" />
+            <ArrowForwardOutlinedIcon fontSize="large" />
           </IconButton>
         )}
       </Box>

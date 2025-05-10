@@ -4,9 +4,9 @@ import TitleBarImageList from "./TitleBarImageList";
 
 const ContentServices = ({isMobile, isDesktop, isTablet}) => {
   return (
-    <Box
+    <Box className="services"
       sx={{
-        backgroundColor: "black",
+        // backgroundColor: "black",
         color: "white",
         display: "flex",
         alignItems: "center",
@@ -17,21 +17,19 @@ const ContentServices = ({isMobile, isDesktop, isTablet}) => {
         px: 3,
       }}
     >
-      <Typography variant="h3" sx={{ fontWeight: "bold", mb: 2 }}>
+      <Typography variant="h3" fontFamily= "Inria Serif, serif" sx={{fontWeight: "bold", mb: 2  }}   >
         Services
       </Typography>
-      <Typography variant="body1" sx={{ mb: 4, maxWidth: "700px" }}>
+      <Typography variant="body1" fontFamily= "Inria Serif, serif" sx={{ mb: 4, maxWidth: "700px" }} >
         Our passion for innovative design and attention to detail turns your
         vision into a stunning reality.
       </Typography>
 
       {/* Image List with Hover Effects */}
       <Box
+      className="services-container"
         sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: 2,
+         
           maxWidth: isDesktop ? "80%" : "100%"
         }}
       >

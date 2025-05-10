@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #121212;
   --foreground: #171717;
 }
 
@@ -19,7 +19,11 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Geist", sans-serif; */
+  font-family: "Inria Serif", serif;
+
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,3 +44,50 @@ a {
     color-scheme: dark;
   }
 }
+
+.banner_overlay{background: rgba(0,0,0,.5); width:100%; height:100%; position: absolute; top:0; left:0;}
+.banner_content{position: relative; padding: 20px;    font-family: "Inria Serif", serif;
+
+}
+.about-us, .our-projects, .services{background: #121212; position: relative;}
+/* .our-projects{position: relative; } */
+.our-projects:after{content: ""; position: absolute; right: 0; top:-60px; width:232px; height:463px; background: url(../../public/images/watermark_logo.png);}
+.our-projects .prev, .our-projects .next{border-radius: 0;}
+.our-projects .prev:hover, .our-projects .next:hover{background: white;}
+.our-projects .prev:hover svg, .our-projects .next:hover svg{color: #000;}
+/* .services{position: relative;} */
+.services-container{ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ .services-inner-container{display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 4;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  max-width: 1184px;
+  width: 100%}
+.services:before{content: ""; position: absolute; left: 20px; top:100px; width:150px; height:1290px; background: url(../../public/images/watermark.png);}
+.card-overlay{position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  padding: 20px;
+  height: 30%;}
+  .services-card{ position: relative;
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;}
+    .services-card:hover img{filter: blur(5px);}
+  .card-overlay h5{font-size: 20px;}
+  .overlay-desc{text-align: left; padding-top: 10px; }
+  .overlay-desc p{font-size: 16px;}
+  

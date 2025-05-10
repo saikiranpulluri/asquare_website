@@ -96,7 +96,7 @@ const ContactUs = ({ isMobile = false }) => {
               <Box
                 key={index}
                 sx={{
-                  width: isMobile ? "100%" : "80%",
+                  width: isMobile ? "100%" : "100%",
                   height: 300,
                   bgcolor: "#ccc",
                   backgroundImage: `url(${item.image})`,
@@ -227,12 +227,12 @@ const textFieldStyles = {
   backgroundColor: "#222",
   borderRadius: "5px",
   "& .MuiOutlinedInput-root": {
-    "& fieldset": { borderColor: "white" },
-    "&:hover fieldset": { borderColor: "#ddd" },
-    "&.Mui-focused fieldset": { borderColor: "#00bcd4", borderWidth: "2px" },
+    "& fieldset": { borderColor: "0" },
+    "&:hover fieldset": { borderColor: "0" },
+    "&.Mui-focused fieldset": { borderColor: "#ddd", borderWidth: "2px" },
   },
   "& .MuiInputLabel-root": { color: "#bbb" },
-  "& .MuiInputLabel-root.Mui-focused": { color: "#00bcd4" },
+  "& .MuiInputLabel-root.Mui-focused": { color: "#ddd" },
   "& .MuiInputBase-input": {
     color: "white",
     fontSize: "16px",

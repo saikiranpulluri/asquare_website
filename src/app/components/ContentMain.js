@@ -22,15 +22,16 @@ const ContentMain = ({ isMobile = false }) => {
         position: "relative",
       }}
     >
+      <Box className="banner_overlay"></Box> 
       {/* Main Centered Text */}
-      <Box sx={{ padding: "20px" }}>
-        <Typography variant="h3" fontWeight="bold">
+      <Box class="banner_content">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif">
           Transforming Spaces,
         </Typography>
-        <Typography variant="h3" fontWeight="bold">
+        <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif">
           Elevating Lives
         </Typography>
-        <Typography variant="subtitle1" sx={{ mt: 2 }}>
+        <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" sx={{ mt: 2 }}>
           Expertly crafted interior spaces that blend style, comfort, and you.
         </Typography>
       </Box>

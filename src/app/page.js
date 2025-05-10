@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 // import Content from "./components/Content";
 
+
+
 const ContentMain = dynamic(() => import("./components/ContentMain"), {
   ssr: false,
 });
@@ -30,7 +32,7 @@ export default function Home() {
     const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
     const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Box id="main-container" style={{ overflowY: "auto", height: "100vh" }}>
+    <Box id="main-container" style={{ overflowY: "auto", height: "100vh" }} >
       <Header />
       <Box id="main">
         <ContentMain isMobile={isMobile} />

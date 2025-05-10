@@ -6,9 +6,9 @@ const ContentProjects = ({isMobile = false}) => {
   const projectsRef = useRef(null);
 
   return (
-    <Box
+    <Box className="our-projects"
       sx={{
-        backgroundColor: "black",
+        // backgroundColor: "black",
         color: "white",
         display: "flex",
         flexDirection: "column",
@@ -23,6 +23,7 @@ const ContentProjects = ({isMobile = false}) => {
         ref={projectsRef}
         variant="h3"
         align="center"
+        fontFamily= "Inria Serif, serif"
         sx={{ fontWeight: "bold", mb: 2 }}
       >
         Our Projects

@@ -10,6 +10,7 @@ import {
   ListItemText,
   useMediaQuery,
   Box,
+  capitalize,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
@@ -55,8 +56,8 @@ const Header = () => {
       position="fixed"
       sx={{
         background: "rgba(0,0,0,0.5)",
-        marginTop: "1%",
-        borderRadius: "10px",
+        marginTop: "24px",
+        // borderRadius: "10px",
         maxWidth: isMobile ? '100%' :"85%",
         left: "50%",
         transform: "translateX(-50%)"
@@ -71,8 +72,8 @@ const Header = () => {
             >
               <img src="/images/logomain.png" alt="Logo" height="35px" />
             </Box>
-            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)}>
-              <MenuIcon />
+            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} >
+              <MenuIcon sx={{ textTransform: "capitalize" }}/>
             </IconButton>
             <Drawer
               anchor="right"
@@ -138,6 +139,8 @@ const Header = () => {
                   onClick={() => handleScroll(section.navigate)}
                   sx={{
                     position: "relative",
+                    textTransform: "capitalize",
+                    fontFamily: "Inria Serif, serif",
                     "&::after": {
                       content: "''",
                       position: "absolute",
@@ -145,7 +148,7 @@ const Header = () => {
                       left: 0,
                       width: "0%",
                       height: "2px",
-                      backgroundColor: "yellow",
+                      backgroundColor: "#fff",
                       transition: "width 0.3s ease-in-out",
                     },
                     "&:hover::after": { width: "100%" },
@@ -168,10 +171,13 @@ const Header = () => {
                   key={index}
                   onClick={() => handleClick(item.url)}
                   color="inherit"
+                  
                   sx={{
+                   
                     "&:hover": {
                       backgroundColor: "white",
                       color: "black",
+                      borderRadius: '2px'
                     },
                   }}
                 >
@@ -184,6 +190,9 @@ const Header = () => {
                 sx={{
                   borderColor: "white",
                   color: "white",
+                  textTransform: "capitalize",
+                  fontFamily: "Inria Serif, serif",
+                  borderRadius: '0',
                   "&:hover": {
                     borderColor: "white",
                     backgroundColor: "white",
