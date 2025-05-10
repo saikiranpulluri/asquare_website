@@ -29,10 +29,16 @@ const FooterComponent = dynamic(() => import("./components/Footer"), {
 export default function Home() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-    const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
-    const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Box id="main-container" style={{ overflowY: "auto", height: "100vh" }} >
+    <Box id="main-container" style={{
+      overflowY: "auto", height: "100vh", scrollbarWidth: 'none',          // Firefox
+      '&::-webkit-scrollbar': {
+        display: 'none',              // Chrome/Safari
+      },
+      '-msOverflowStyle': 'none',
+    }} >
       <Header />
       <Box id="main">
         <ContentMain isMobile={isMobile} />
