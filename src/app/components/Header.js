@@ -47,8 +47,8 @@ const Header = () => {
 
   const headerIcons = [
     // { component: <Facebook />, url: "https://www.facebook.com" },
-    { component: <Instagram />, url: "https://www.instagram.com/asquare_design_studio?igsh=cDhqamgwNDhwb2hz&utm_source=qr" },
-    { component: <WhatsApp />, url: "https://wa.me/message/4GXMFNM7EONEE1" },
+    { component: <Instagram style={{ color: isMobile ? '#E1306C' : ''}} />, url: "https://www.instagram.com/asquare_design_studio?igsh=cDhqamgwNDhwb2hz&utm_source=qr" },
+    { component: <WhatsApp style={{ color: isMobile ? '#25D366' : ''}}  />, url: "https://wa.me/message/4GXMFNM7EONEE1" },
   ];
 
   return (
@@ -142,9 +142,6 @@ const Header = () => {
                   sx={{
                    textTransform : "capitalize",
                    fontFamily: "Inria Serif, serif",
-                  
-                    
-                    
                   }}
                 >
                   {section.sectionName}
@@ -158,15 +155,12 @@ const Header = () => {
             </Box>
 
             {/* Right Icons + Contact */}
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2}}>
               {headerIcons.map((item, index) => (
                 <IconButton
                 className="social-icons"
                   key={index}
                   onClick={() => handleClick(item.url)}
-                  
-          
-                  
                 >
                   {item.component}
                 </IconButton>

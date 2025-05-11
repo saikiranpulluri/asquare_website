@@ -35,7 +35,7 @@ const Footer = ({ isMobile }) => {
       }}
     >
       {/* Square Logo */}
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: 2 }}>
         <img src="/images/logo.png" alt="A Square Design Studio" />
       </Box>
 
