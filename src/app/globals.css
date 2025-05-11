@@ -116,7 +116,13 @@ a {
       .contact-us:before{content: ""; position: absolute; left: -90px; top:0px; width:232px; height:463px; background: url(../../public/images/watermark_logo1.png) no-repeat;}
       .about-us{padding-bottom: 12%;}
 
-
+.contact-section-wrapper{display: flex;
+  flex-direction:row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 1800px;
+  gap: 32px}
 .services-inner-container {
   display: flex;
   flex-wrap: wrap;
@@ -130,13 +136,38 @@ a {
  
   width: 100%
 }
-
+/* .header-wrapper{padding: 0 20px;} */
+.header{ 
+  /* margin-top: 24px; */
+  
+  max-width: 1225px; margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);}
 
 .banner_content h3{font-size: 54px; line-height: 94px;}
 .primary-btn{font-size: 20px !important;}
-.about-content{height:500px}
+.about-content{height:500px; position: absolute;
+  bottom: -90px;
+  right: 6%;
+  width: 495px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  
+  padding: 15px;
+  text-align: left;
+  color: white;
+ border:1px solid #888;}
 .copyright{color:#fff; font-size: 20px;}
 /* .swiper-slide-visible{width:768px !important;} */
+.scroll-down{position: absolute; bottom:0; left:50%; transform: translate(-50%);}
+.scroll-down-wrapper{max-width: 1225px; margin: 0 auto;position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+.center-logo{position: absolute; left:50%; transform: translate(-50%);}
 
 @media screen and (max-width: 1500px){
 
@@ -154,4 +185,42 @@ a {
 
 @media screen and (max-width: 1330px){
   .services-card{width:280px; height:260px}
+}
+
+@media screen and (max-width: 900px){
+
+  .services-card{width:360px; height:300px}
+  .contact-section-wrapper{flex-direction: column; gap:20px;}
+  .contact-us{max-width: 100% !important}
+
+  
+}
+
+@media screen and (max-width: 600px){
+  .about-content{        height: auto;
+    width: 80%;
+    bottom: -40px;
+    right: auto;
+    left: 50%;
+   
+    transform: translateX(-50%) !important;
+  
+  
+  }
+
+  /* .contact-us{max-width: 100%;} */
+
+}
+
+@media screen and (max-width: 400px){
+
+  .services-card{width:300px; height:280px}
+  .card-overlay h5{font-size: 18px;}
+  
+}
+
+@media screen and (max-width: 320px){
+
+  .services-card{width:260px; height:220px}
+  
 }

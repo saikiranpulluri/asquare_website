@@ -135,7 +135,7 @@ const ProjectsCarousel = ({isMobile}) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: isMobile ? "100%" : "90%",
+          width: isMobile ? "80%" : "90%",
         }}
       >
         {!isMobile && (
@@ -191,7 +191,7 @@ const ProjectsCarousel = ({isMobile}) => {
                   sx={{
                     position: "relative",
                     // width: "768px",
-                    height: "540px", // adjust as needed
+                    height: isMobile ? '240px' : "540px", // adjust as needed
                     borderRadius: 2,
                     overflow: "hidden",
                     boxShadow: "0px 4px 20px rgba(255, 255, 255, 0.2)",

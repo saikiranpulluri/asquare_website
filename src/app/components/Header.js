@@ -52,15 +52,16 @@ const Header = () => {
   ];
 
   return (
+    
     <AppBar
+    className="header"
       position="fixed"
+      
       sx={{
-        background: "rgba(0,0,0,0.5)",
-        marginTop: "24px",
-        // borderRadius: "10px",
-        maxWidth: isMobile ? '100%' :"85%",
-        left: "50%",
-        transform: "translateX(-50%)"
+        background: 'rgba(0,0,0,0.5)',
+        left: '50%',
+        top: isMobile ? '56px' : '24px',
+        width: '90%',
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -70,7 +71,7 @@ const Header = () => {
               sx={{ flexGrow: 1, cursor: "pointer" }}
               onClick={() => handleScroll("main")}
             >
-              <img src="/images/logomain.png" alt="Logo" height="35px" />
+              <img src="/images/logomain.png" alt="Logo" height="30px" />
             </Box>
             <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} >
               <MenuIcon sx={{ textTransform: "capitalize" }}/>
@@ -152,7 +153,7 @@ const Header = () => {
             </Box>
 
             {/* Center Logo */}
-            <Box sx={{ cursor: "pointer" }} onClick={() => handleScroll("main")}>
+            <Box className="center-logo" sx={{ cursor: "pointer" }} onClick={() => handleScroll("main")}>
               <img src="/images/logomain.png" alt="Logo" height="40px" />
             </Box>
 
@@ -196,6 +197,7 @@ const Header = () => {
         )}
       </Toolbar>
     </AppBar>
+   
   );
 };
 

@@ -11,7 +11,7 @@ const ContentMain = ({ isMobile = false }) => {
     <Box
       sx={{
         height: "100vh",
-        backgroundImage: "url('/images/image3.jpeg')",
+        backgroundImage:  "url('/images/banner.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -37,23 +37,15 @@ const ContentMain = ({ isMobile = false }) => {
       </Box>
 
       {/* Scroll Down Section (fixed to bottom center) */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 20,
-          left: 0,
-          right: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <Box className="scroll-down-wrapper">
+        <Box className="scroll-down">
         <Typography variant="subtitle1" fontFamily= "Inria Serif, serif" fontSize="22px" sx={{ mb: 1 }}>
           Scroll Down
         </Typography>
         <Button sx={{ color: "white" }} onClick={handleScroll}>
           <ExpandCircleDownRoundedIcon fontSize="medium" />
         </Button>
+        </Box>
       </Box>
     </Box>
   );

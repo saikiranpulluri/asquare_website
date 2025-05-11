@@ -73,15 +73,8 @@ const ContactUs = ({ isMobile = false }) => {
         </Typography>
 
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: isMobile ? "column" : "row",
-            alignItems: "stretch",
-            justifyContent: "center",
-            width: "100%",
-            maxWidth: "1800px",
-            gap: 4,
-          }}
+        className="contact-section-wrapper"
+       
         >
           {/* Left Side - Images */}
           <Box
@@ -116,8 +109,8 @@ const ContactUs = ({ isMobile = false }) => {
             onSubmit={handleSubmit}
             sx={{
               flex: 1,
-              paddingLeft: isMobile ? 0 : 4,
-              paddingTop: isMobile ? 4 : 0,
+              // paddingLeft: isMobile ? 0 : 4,
+              // paddingTop: isMobile ? 4 : 0,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -132,7 +125,8 @@ const ContactUs = ({ isMobile = false }) => {
               variant="outlined"
               value={formData.name}
               onChange={handleChange}
-              sx={textFieldStyles}
+              sx={
+                textFieldStyles}
             />
 
             <Box
@@ -211,7 +205,7 @@ const ContactUs = ({ isMobile = false }) => {
                 borderRadius: "0",
                 borderWidth: "2px",
                 width:"150px",
-                mt: 4,
+                mt: isMobile ? '2' : '4',
                 "&:hover": {
                   borderColor: "white",
                   backgroundColor: "white",
@@ -236,7 +230,7 @@ const ContactUs = ({ isMobile = false }) => {
 };
 
 const textFieldStyles = {
-  mb: 5,
+  marginBottom: "32px" ,
   backgroundColor: "#222",
   borderRadius: "5px",
   "& .MuiOutlinedInput-root": {
