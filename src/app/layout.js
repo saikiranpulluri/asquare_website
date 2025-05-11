@@ -20,8 +20,8 @@ const inriaSerif = Inria_Serif({
 })
 
 export const metadata = {
-  title: "A Square",
-  description: "Transforming Spaces",
+  title: "A Square Designer Studio - Interior Designers",
+  description: "A Square Designer Studio will Transform Spaces",
 };
 
 export default function RootLayout({ children }) {
