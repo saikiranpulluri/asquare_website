@@ -19,9 +19,31 @@ const inriaSerif = Inria_Serif({
   
 })
 
+// export const metadata = {
+//   title: "A Square Design Studio | Interior Designers",
+//   description: "A Square Design Studio will Transform Spaces",
+// };
+
+
 export const metadata = {
-  title: "A Square Design Studio - Interior Designers",
+  title: "A Square Design Studio | Interior Designers",
   description: "A Square Design Studio will Transform Spaces",
+  keywords: ["interior design", "home decor", "modular kitchen", "A-square",  "interior", "design studio"],
+  openGraph: {
+    title: "A Square Design Studio",
+    description: "Ineterior Design",
+    url: "https://asquaredesignstudio.co.in/",
+    siteName: "A-Square Design Studio",
+    // images: [
+    //   {
+    //     url: "/images/og-image.jpg", // hosted in public folder
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Your OG Image Alt Text",
+    //   },
+    // ],
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
