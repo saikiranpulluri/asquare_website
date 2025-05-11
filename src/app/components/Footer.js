@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, IconButton, Button } from "@mui/material";
 import { Instagram, WhatsApp } from "@mui/icons-material";
 
-const Footer = () => {
+const Footer = ({isMobile}) => {
   const handleClick = (url) => {
     window?.open(url, "_blank");
   };
@@ -30,7 +30,7 @@ const Footer = () => {
       }}
     >
       {/* Logo */}
-      <Box sx={{ mb: 3, mt: 4 }} className="footer-logo">
+      <Box sx={{ mb: 3, mt: 4, mr: isMobile ? 4 : 0  }} className="footer-logo">
         <img src="/images/logo.png" alt="Logo" />
       </Box>
 
