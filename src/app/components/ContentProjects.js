@@ -15,7 +15,7 @@ const ContentProjects = ({isMobile = false}) => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        paddingY: "6%",
+        
         width: "100%",
       }}
     >

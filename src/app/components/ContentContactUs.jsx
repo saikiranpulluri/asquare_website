@@ -57,9 +57,9 @@ const ContactUs = ({ isMobile = false }) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: "#101010",
+         
           color: "white",
-          padding: 4,
+          paddingX: 4,
           maxWidth: "90%",
           margin: "0 auto"
         }}

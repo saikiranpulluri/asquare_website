@@ -20,7 +20,7 @@ import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 const projects = [
   {
     image: "/images/projects/project1.jpeg",
-    quote: "A square made our home beautiful.",
+    quote: "A square made our home beautiful. ",
     author: "B Rajesh",
     subImages: [
       "/images/projects/project1.jpeg",
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     image: "/images/projects/project1.jpeg",
-    quote: "A square made our home beautiful.",
+    quote: "A square made our home beautiful. ",
     author: "B Rajesh",
     subImages: [
       "/images/projects/project1.jpeg",
@@ -135,7 +135,7 @@ const ProjectsCarousel = ({isMobile}) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: isMobile ? "80%" : "90%",
+          width: isMobile ? "100%" : "90%",
         }}
       >
         {!isMobile && (
@@ -185,13 +185,14 @@ const ProjectsCarousel = ({isMobile}) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{scale: 0.95}}
                 onClick={() => setSelectedProject(project)}
+                
               >
                 <Box
                 // className="swiper-slide-center"
                   sx={{
                     position: "relative",
                     // width: "768px",
-                    height: isMobile ? '240px' : "540px", // adjust as needed
+                    height: isMobile ? '360px' : "540px", // adjust as needed
                     borderRadius: 2,
                     overflow: "hidden",
                     boxShadow: "0px 4px 20px rgba(255, 255, 255, 0.2)",
@@ -225,11 +226,15 @@ const ProjectsCarousel = ({isMobile}) => {
                   />
                 </Box>
                 {/* Move text OUTSIDE the Box */}
-                {activeIndex === index && <><Typography variant="body1" fontFamily= "Inria Serif, serif" mt={2} sx={{ color: "white", fontStyle: "italic", fontSize: "20px" , maxWidth: "390px", margin: "30px auto 0" }}>
+                <Box className="project-info">
+                {activeIndex === index && <><Typography variant="body1" className="project-name" fontFamily= "Inria Serif, serif" mt={2} sx={{ color: "white", fontStyle: "italic", fontSize: "20px" , maxWidth: "390px",  margin: "30px auto 0" }}>
                   {project.quote}
                 </Typography><Typography variant="body2" fontFamily= "Inria Serif, serif" color="white" fontSize="20px">
                     - {project.author}
-                  </Typography></>}
+                  </Typography></>
+                   }
+                  </Box>
+                 
               </motion.div>
             </SwiperSlide>
           ))}

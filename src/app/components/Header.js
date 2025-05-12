@@ -64,7 +64,7 @@ const Header = () => {
         width: '90%',
       }}
     >
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }} className="header-inner">
         {isMobile ? (
           <>
             <Box
@@ -73,7 +73,7 @@ const Header = () => {
             >
               <img src="/images/logomain.png" alt="Logo" height="30px" />
             </Box>
-            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} >
+            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} className="hamberger-menu">
               <MenuIcon sx={{ textTransform: "capitalize" }}/>
             </IconButton>
             <Drawer

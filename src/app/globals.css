@@ -49,8 +49,9 @@ a {
 .banner_content{position: relative; padding: 20px;    font-family: "Inria Serif", serif;
 
 }
-.about-us, .our-projects, .services{background: #101010; position: relative;}
+.about-us, .our-projects, .services, .contact-us{background: #101010; padding-top:140px; position: relative;}
 .about-us h3, .our-projects h3, .services h3, .contact-us h3{font-size: 48px;}
+.about-us{padding-bottom: 100px;}
 /* .our-projects{position: relative; } */
 .our-projects:after{content: ""; position: absolute; right: 0; top:-60px; width:232px; height:463px; background: url(../../public/images/watermark_logo.png) no-repeat;}
 .our-projects .prev, .our-projects .next{border-radius: 0;}
@@ -111,10 +112,10 @@ a {
     .social-icons:hover{ background-color: #fff !important;
       color: black !important;
       border-radius: 2px}
-      .contact-us{position: relative;}
+      .contact-us{position: relative;padding-top: 6%; padding-bottom: 66px;}
       .contact-us:after{content: ""; position: absolute; right: 10px; top:-790px; width:150px; height:1978px; background: url(../../public/images/watermark1.png) no-repeat;}
       .contact-us:before{content: ""; position: absolute; left: -90px; top:0px; width:232px; height:463px; background: url(../../public/images/watermark_logo1.png) no-repeat;}
-      .about-us{padding-bottom: 12%;}
+      /* .about-us{padding-bottom: 12%;} */
 
 .contact-section-wrapper{display: flex;
   flex-direction:row;
@@ -168,6 +169,8 @@ a {
   flex-direction: column;
   align-items: center;}
 .center-logo{position: absolute; left:50%; transform: translate(-50%);}
+.project-info{min-height: 100px; }
+.project-name{-webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;}
 
 @media screen and (max-width: 1500px){
 
@@ -192,7 +195,13 @@ a {
   .services-card{width:360px; height:300px}
   .contact-section-wrapper{flex-direction: column; gap:20px;}
   .contact-us{max-width: 100% !important}
-
+  .header-inner{min-height: 68px !important;}
+  .hamberger-menu{padding: 0 !important;}
+  .about-us, .our-projects, .services, .contact-us{padding-top: 100px;}
+  .about-us h3, .our-projects h3, .services h3, .contact-us h3{margin-bottom: 30px;}
+  .about-us{padding-bottom: 50px;}
+  .project-info{min-height: 150px;}
+  .project-name{-webkit-line-clamp: 4;}
   
 }
 

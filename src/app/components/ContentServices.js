@@ -12,7 +12,7 @@ const ContentServices = ({isMobile, isDesktop, isTablet}) => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        paddingTop: "6%",
+        
         flexDirection: "column",
         px: 3,
       }}
@@ -20,7 +20,7 @@ const ContentServices = ({isMobile, isDesktop, isTablet}) => {
       <Typography variant="h3" fontFamily= "Inria Serif, serif" sx={{fontWeight: "bold", mb: 2  }}   >
         Services
       </Typography>
-      <Typography variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px" sx={{ mb: 8, maxWidth: "700px" }} >
+      <Typography variant="body1" fontFamily= "Inria Serif, serif" fontSize="20px" sx={{ mb: isMobile ? '24px' : '48px', maxWidth: "700px" }} >
         Our passion for innovative design and attention to detail turns your
         vision into a stunning reality.
       </Typography>
