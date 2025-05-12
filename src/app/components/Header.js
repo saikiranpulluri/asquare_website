@@ -104,7 +104,7 @@ const Header = () => {
                         left: 0,
                         width: "0%",
                         height: "2px",
-                        backgroundColor: "yellow",
+                        backgroundColor: "white",
                         transition: "width 0.3s ease-in-out",
                       },
                       "&:hover::after": { width: "100%" },

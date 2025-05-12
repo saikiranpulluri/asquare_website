@@ -11,7 +11,7 @@ const ContentAboutUs = ({isMobile = false}) => {
         animate={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
       >
         <Typography variant="h3" fontWeight="bold" fontFamily= "Inria Serif, serif" textAlign="center"  color="white" sx={ {mb: 8}}>
-          About us
+          About Us
         </Typography>
       </motion.div>
 

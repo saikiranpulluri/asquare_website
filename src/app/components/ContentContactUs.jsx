@@ -69,7 +69,7 @@ const ContactUs = ({ isMobile = false }) => {
           variant="h3" fontFamily= "Inria Serif, serif"
           sx={{ textAlign: "center",mb: 8, fontWeight: "bold" }}
         >
-          Contact us
+          Contact Us
         </Typography>
 
         <Box
