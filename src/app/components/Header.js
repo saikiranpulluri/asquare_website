@@ -60,7 +60,7 @@ const Header = () => {
       sx={{
         background: 'rgba(0,0,0,0.5)',
         left: '50%',
-        top: isMobile ? '56px' : '24px',
+        top: isMobile ? '30px' : '24px',
         width: '90%',
       }}
     >
